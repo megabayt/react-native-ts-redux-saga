@@ -1,0 +1,148 @@
+{
+  "name": "react-native-ts-redux-saga",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "node_modules/.bin/jest",
+    "tslint": "node_modules/.bin/tslint -p ./tsconfig.json 'src/**/*.ts?(x)'",
+    "coverage": "jest --coverage; open coverage/lcov-report/index.html || xdg-open coverage/lcov-report/index.html"
+  },
+  "dependencies": {
+    "@types/he": "^1.1.0",
+    "@types/react-native-calendars": "^1.20.5",
+    "@types/react-native-document-picker": "^2.0.1",
+    "@types/rn-fetch-blob": "^1.2.1",
+    "apisauce": "^1.0.1",
+    "buffer": "^5.2.1",
+    "formik": "^1.4.1",
+    "he": "^1.2.0",
+    "immer": "^2.1.4",
+    "jest-teamcity": "^1.4.0",
+    "jest-teamcity-reporter": "^0.9.0",
+    "lint-staged": "^8.1.5",
+    "lodash": "^4.17.11",
+    "moment": "^2.23.0",
+    "native-base": "2.10.0",
+    "react": "^16.8.2",
+    "react-native": "0.58.5",
+    "react-native-calendars": "^1.22.0",
+    "react-native-camera": "^1.9.1",
+    "react-native-cookies": "^3.3.0",
+    "react-native-detect-navbar-android": "^0.2.0",
+    "react-native-device-info": "^0.26.4",
+    "react-native-document-picker": "^2.3.0",
+    "react-native-extra-dimensions-android": "^1.2.5",
+    "react-native-file-viewer": "^1.0.14",
+    "react-native-firebase": "^5.2.3",
+    "react-native-gesture-handler": "^1.0.12",
+    "react-native-image-crop-picker": "^0.22.0",
+    "react-native-keyboard-spacer": "^0.4.1",
+    "react-native-keychain": "^3.0.0",
+    "react-native-linear-gradient": "^2.5.3",
+    "react-native-modal": "^7.0.2",
+    "react-native-phone-call": "^1.0.9",
+    "react-native-popup-menu": "^0.15.5",
+    "react-native-rate": "^1.1.6",
+    "react-native-snap-carousel": "^3.7.5",
+    "react-native-splash-screen": "^3.2.0",
+    "react-native-status-bar-height": "^2.2.0",
+    "react-native-svg": "^9.0.0",
+    "react-native-svg-charts": "^5.2.0",
+    "react-native-switch-toggle": "^1.0.8",
+    "react-native-text-size": "^3.0.0",
+    "react-native-vector-icons": "^6.2.0",
+    "react-native-webview": "^5.4.2",
+    "react-navigation": "^3.0.9",
+    "react-redux": "^6.0.0",
+    "react-timer-mixin": "^0.13.4",
+    "redux": "^4.0.1",
+    "redux-persist": "^5.10.0",
+    "redux-saga": "^0.16.2",
+    "reselect": "^4.0.0",
+    "rn-fetch-blob": "^0.10.15"
+  },
+  "devDependencies": {
+    "@types/color": "^3.0.0",
+    "@types/enzyme": "^3.1.15",
+    "@types/jest": "^23.3.10",
+    "@types/lodash": "^4.14.120",
+    "@types/react": "^16.8.4",
+    "@types/react-native": "^0.57.37",
+    "@types/react-native-keyboard-spacer": "^0.4.1",
+    "@types/react-native-snap-carousel": "^3.7.1",
+    "@types/react-native-svg-charts": "^5.0.1",
+    "@types/react-native-vector-icons": "^4.6.4",
+    "@types/react-navigation": "^3.0.1",
+    "@types/react-redux": "^6.0.11",
+    "@types/react-test-renderer": "^16.0.3",
+    "@types/redux-mock-store": "^1.0.0",
+    "babel-jest": "23.6.0",
+    "babel-plugin-root-import": "^6.1.0",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "jest": "23.6.0",
+    "metro-react-native-babel-preset": "0.51.1",
+    "patch-package": "^6.0.0-11",
+    "react-dom": "^16.7.0",
+    "react-native-rename": "^2.4.1",
+    "react-test-renderer": "16.6.3",
+    "redux-devtools-extension": "^2.13.7",
+    "redux-mock-store": "^1.5.3",
+    "redux-mock-store-await-actions": "^2.1.0",
+    "shared-git-hooks": "^1.2.1",
+    "ts-jest": "^23.10.5",
+    "tslint": "^5.13.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-config-standard": "^8.0.1",
+    "tslint-immutable": "^5.0.1",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.2.2"
+  },
+  "rnpm": {
+    "assets": [
+      "./src/assets/fonts/"
+    ]
+  },
+  "jest": {
+    "preset": "react-native",
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "globals": {
+      "__DEV__": false,
+      "ts-jest": {
+        "tsConfig": "tsconfig.jest.json"
+      }
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "modulePaths": [
+      "<rootDir>"
+    ],
+    "moduleNameMapper": {
+      "~/(.*)": "<rootDir>/src/$1",
+      "react-native-splash-screen": "<rootDir>/src/__mocks__/react-native-splash-screen.ts",
+      "react-native-cookies": "<rootDir>/src/__mocks__/react-native-splash-screen.ts",
+      "react-native-file-viewer": "<rootDir>/src/__mocks__/react-native-splash-screen.ts",
+      "react-native-keychain": "<rootDir>/src/__mocks__/react-native-splash-screen.ts",
+      "rn-fetch-blob": "<rootDir>/src/__mocks__/react-native-splash-screen.ts"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!react-native|native-base|native-base-shoutem-theme|@shoutem/animation|@shoutem/ui|tcomb-form-native|react-native-vector-icons|rn-fetch-blob)"
+    ],
+    "setupFiles": [
+      "./src/utils/setupTests.js"
+    ],
+    "testResultsProcessor": "jest-teamcity-reporter"
+  }
+}

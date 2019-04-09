@@ -1,0 +1,67 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended",
+        "tslint-config-standard",
+        "tslint-config-prettier",
+        "tslint-config-airbnb",
+        "tslint-react",
+        "tslint-immutable"
+    ],
+    "jsRules": {},
+    "rules": {
+        "ordered-imports": [
+            true,
+            {
+                "import-sources-order": "any",
+                "named-imports-order": "lowercase-first",
+                "grouped-imports": true,
+                "groups": [
+                    { "name": "root import", "match": "^~", "order": 20 },
+                    { "name": "current dir", "match": "^[.]", "order": 30 },
+                    { "name": "parent dir", "match": "^[.][.]", "order": 40 },
+                    { "name": "others", "match": "^", "order": 10 }
+                ]
+            }
+        ],
+        "object-literal-sort-keys": false,
+        "jsx-boolean-value": [true, "never"],
+        "max-line-length": [true, 140],
+        "import-name": false,
+        "no-if-statement": false,
+        "jsx-no-multiline-js": false,
+        "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"],
+        "interface-name" : false,
+        "object-shorthand-properties-first": false,
+        // Recommended built-in rules
+        "no-var-keyword": true,
+        "no-parameter-reassignment": true,
+        "typedef": [true, "call-signature"],
+
+        // Immutability rules
+        "readonly-keyword": true,
+        "readonly-array": true,
+        "no-let": false,
+        "no-object-mutation": true,
+        "no-delete": true,
+        "no-method-signature": false,
+
+        // Functional style rules
+        "no-mixed-interface": false,
+        "no-expression-statement": false,
+        "no-class": false,
+        "no-this": false
+    },
+    "rulesDirectory": [],
+    "paths": {
+        "native-base": ["src/styles/index.d.ts"]
+    },
+    "settings": {
+        "import/resolver": {
+            "babel-plugin-root-import": {
+                "rootPathPrefix": "~",
+                "rootPathSuffix": "./src"
+            }
+        }
+    }
+}

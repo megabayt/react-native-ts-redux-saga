@@ -1,0 +1,5 @@
+{
+  "linters": {
+    "*.{ts,tsx}": ["node_modules/.bin/tslint --fix -p ./tsconfig.json", "git add"]
+  }
+}

@@ -1,0 +1,5 @@
+export default {
+  baseDomain: 'https://mysite.ru',
+  baseURL: 'https://mysite.ru/_back',
+  responseTimeout: 10000,
+};
